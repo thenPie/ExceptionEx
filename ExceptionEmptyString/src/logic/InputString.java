@@ -12,7 +12,7 @@ public class InputString {
         String str = sc.nextLine();
 
         if (str.isEmpty()) {
-            throw new EmptyStringException();
+            throw new EmptyStringException("The string cannot be empty");
         }
 
         return str;
