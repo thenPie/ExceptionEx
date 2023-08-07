@@ -1,4 +1,7 @@
+import logic.FloatReturn;
+
 public class App {
+
     public static void main(String[] args) throws Exception {
         
         // Start of a program
@@ -8,7 +11,7 @@ public class App {
         приложения, вместо этого, необходимо повторно запросить у пользователя ввод данных.
         */
 
-        
+        System.out.println("Float number is " + FloatReturn.FloatIs());
 
     }
 }
