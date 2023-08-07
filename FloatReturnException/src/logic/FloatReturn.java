@@ -11,8 +11,6 @@ public class FloatReturn {
 
         // InputMismatchException
 
-        // that's not how it's supposed to work
-
         float ft = 0;
         do {
             try {
