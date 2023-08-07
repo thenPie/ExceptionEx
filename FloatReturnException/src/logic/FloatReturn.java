@@ -1,5 +1,6 @@
 package logic;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class FloatReturn {
@@ -8,10 +9,20 @@ public class FloatReturn {
 
     public static float FloatIs() {
 
-        System.out.println("Enter a float number: ");
-        float ft = sc.nextFloat();
+        // InputMismatchException
+
+        float ft = 0;
+        do {
+            try {
+                System.out.println("Enter a float number: ");
+                ft = sc.nextFloat();
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input, enter again.");
+            }
+        } while (ft != 0);
+
         return ft;
-        
+
     }
 
 }
