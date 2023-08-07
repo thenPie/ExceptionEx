@@ -11,17 +11,19 @@ public class FloatReturn {
 
         // InputMismatchException
 
-        float ft = 0;
+        Float ft = null;
+
         do {
             try {
+                
                 System.out.println("Enter a float number: ");
                 ft = sc.nextFloat();
+
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input, enter again.");
             }
             sc.nextLine();
-        } while (ft == 0);
-
+        } while (ft == null);
         return ft;
 
     }
