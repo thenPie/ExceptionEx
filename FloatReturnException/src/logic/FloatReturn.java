@@ -11,6 +11,8 @@ public class FloatReturn {
 
         // InputMismatchException
 
+        // that's not how it's supposed to work
+
         float ft = 0;
         do {
             try {
@@ -19,7 +21,8 @@ public class FloatReturn {
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input, enter again.");
             }
-        } while (ft != 0);
+            sc.nextLine();
+        } while (ft == 0);
 
         return ft;
 
