@@ -5,20 +5,26 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import Exceptions.NotACharException;
+import Exceptions.NotAGenderException;
+import Exceptions.NotAPhoneNumberException;
+
 public class WriteInfo {
     
-    public static void Write(String[] info) {
+    public static void Write(String[] info) throws NotAPhoneNumberException, NotACharException, NotAGenderException {
 
         String fileName = info[0] + ".txt";
         String fileOutputPath = "src/Files/" + fileName;
 
         boolean fileExists = Files.exists(Paths.get(fileOutputPath));
-        DoesFileExist(fileExists, fileOutputPath);
+        DoesLastNameExist(fileExists, fileOutputPath);
+        DataChecker.isPhoneNumber(info);
+        DataChecker.isGender(info);
         Writeer(info, fileOutputPath);
 
     }
     
-    private static void DoesFileExist(boolean fileExists, String fileOutputPath) {
+    private static void DoesLastNameExist(boolean fileExists, String fileOutputPath) {
 
         try {
             if (fileExists == false) {
