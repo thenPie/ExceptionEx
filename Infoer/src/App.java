@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 import Logic.ExceptionChecker;
+import Logic.WriteInfo;
 
 public class App {
 
@@ -15,10 +16,8 @@ public class App {
         int amountOfVariables = 6;
 
         ExceptionChecker.MoreOrLessInfo(info, amountOfVariables);
-
-        for (int i = 0; i < amountOfVariables; i++) {
-            System.out.println(i + " - " + info[i]);
-        }
-
+        
+        WriteInfo.Write(info);
+        
     }
 }
