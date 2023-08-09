@@ -11,26 +11,12 @@ public class WriteInfo {
     public static void Write(String[] info) {
 
         String fileName = info[0] + ".txt";
-        String fileOutputPath = "../Files/" + fileName;
-        
-        File file = new File(fileOutputPath);
+        String fileOutputPath = "src/Files/" + fileName;
 
-        /*
-        try {
+        // writer.write("<" + info[0] + "><" + info[1] + "<>" + info[2] + "<>" + info[3] + "<>" + info[4] + "<>" + info[5] + "<");
 
-            FileWriter writer = new FileWriter(fileOutputPath);
-
-            writer.write("<" + info[0] + "><" + info[1] + "<>" + info[2] + "<>" + info[3] + "<>" + info[4] + "<>" + info[5] + "<");
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        */
-
-        /*
         boolean fileExists = Files.exists(Paths.get(fileOutputPath));
-        System.out.println("File name is " + fileName + "\n" + fileOutputPath + " - " + fileExists);
-        */
+        
     }
 
 }
