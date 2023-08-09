@@ -5,19 +5,24 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import Exceptions.DaysException;
+import Exceptions.MonthsException;
 import Exceptions.NotACharException;
+import Exceptions.NotADateException;
 import Exceptions.NotAGenderException;
 import Exceptions.NotAPhoneNumberException;
+import Exceptions.YearException;
 
 public class WriteInfo {
     
-    public static void Write(String[] info) throws NotAPhoneNumberException, NotACharException, NotAGenderException {
+    public static void Write(String[] info) throws NotAPhoneNumberException, NotACharException, NotAGenderException, NotADateException, DaysException, MonthsException, YearException {
 
         String fileName = info[0] + ".txt";
         String fileOutputPath = "src/Files/" + fileName;
 
         boolean fileExists = Files.exists(Paths.get(fileOutputPath));
         DoesLastNameExist(fileExists, fileOutputPath);
+        DataChecker.isBirthday(info);
         DataChecker.isPhoneNumber(info);
         DataChecker.isGender(info);
         Writeer(info, fileOutputPath);
